@@ -79,8 +79,8 @@ class VentanaPrincipal(QMainWindow):
         boton_agregar1.clicked.connect(self.reaccion1)
         boton_agregar2.clicked.connect(self.reaccion2)
         #Labels
-        bienvenida = QLabel("")
-        instrucciones = QLabel("")
+        bienvenida = QLabel("Bienvenido/a")
+        instrucciones = QLabel("Aprete Agregar Datos para agregar los datos de cada persona (Altura y medida de Cintura en centimetros), luego aprete Comparar para comparar los ICA de las personas")
         self.nombre_objeto1 = QLabel("")
         self.cintura_objeto1 = QLabel("")
         self.altura_objeto1 = QLabel("")
