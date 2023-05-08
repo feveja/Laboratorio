@@ -151,7 +151,10 @@ class VentanaPrincipal(QMainWindow):
             self.comparador.setText(">")
         elif personas[0].getCintura() < personas[1].getCintura():
             self.comparador.setText("<")
+        else: 
+            self.comparador.setText("=")
         personas.clear()
+        
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
