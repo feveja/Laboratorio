@@ -78,6 +78,7 @@ class VentanaPrincipal(QMainWindow):
         #Connect
         boton_agregar1.clicked.connect(self.reaccion1)
         boton_agregar2.clicked.connect(self.reaccion2)
+        boton_comparar.clicked.connect(self.comparar)
         #Labels
         bienvenida = QLabel("Bienvenido/a")
         instrucciones = QLabel("Aprete Agregar Datos para agregar los datos de cada persona (Altura y medida de Cintura en centimetros), luego aprete Comparar para comparar los ICA de las personas")
@@ -144,8 +145,14 @@ class VentanaPrincipal(QMainWindow):
             self.nombre_objeto2.setText(objeto.getNombre())
             self.cintura_objeto2.setText(f"{objeto.getCintura()}")
             self.altura_objeto2.setText(f"{objeto.getAltura()}")
-        
 
+    def comparar(self):
+        if personas[0].getCintura() > personas[1].getCintura():
+            self.comparador.setText(">")
+        elif personas[0].getCintura() < personas[1].getCintura():
+            self.comparador.setText("<")
+        personas.clear()
+        
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ventana = VentanaPrincipal()
