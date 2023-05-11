@@ -11,4 +11,4 @@ class Persona:
     def getAltura(self):
         return self.__altura
     def getICA(self):
-        return self.__cintura/self.__alturas
+        return self.__cintura/self.__altura

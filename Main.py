@@ -139,17 +139,19 @@ class VentanaPrincipal(QMainWindow):
             self.nombre_objeto1.setText(objeto.getNombre())
             self.cintura_objeto1.setText(f"{objeto.getCintura()}")
             self.altura_objeto1.setText(f"{objeto.getAltura()}")
+            self.dato_objeto1.setText(f"{objeto.getICA()}")
 
         elif identificador_ventana == 2:
             personas.append(objeto)
             self.nombre_objeto2.setText(objeto.getNombre())
             self.cintura_objeto2.setText(f"{objeto.getCintura()}")
             self.altura_objeto2.setText(f"{objeto.getAltura()}")
+            self.dato_objeto2.setText(f"{objeto.getICA()}")
 
     def comparar(self):
-        if personas[0].getCintura() > personas[1].getCintura():
+        if personas[0].getICA() > personas[1].getICA():
             self.comparador.setText(">")
-        elif personas[0].getCintura() < personas[1].getCintura():
+        elif personas[0].getICA() < personas[1].getICA():
             self.comparador.setText("<")
         else: 
             self.comparador.setText("=")
